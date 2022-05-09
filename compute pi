@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compute pi in pyscript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+<center>
+<py-script>
+
+print("Let's compute π:")
+def wallis(n):
+    pi = 2
+    for i in range(1,n):
+        pi *= 4 * i **2 / (4 * i ** 2 - 1)
+    return pi
+
+pi = wallis(100000)
+s = f"n is approximately {pi:.3f}"
+print(s)
+
+
+
+  </py-script>
+
+
+</center>
+
+</body>
+</html>
